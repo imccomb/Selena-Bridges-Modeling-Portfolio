@@ -1,0 +1,509 @@
+body {
+	background: rgba(0,0,0,0.9);
+	margin: 0;
+	color: #fff;
+	font-family: 'Quicksand', sans-serif;
+}
+
+h2 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 200%;
+	text-shadow: 0 5px 5px #181a1c;
+	color: #f3f3f3;
+	animation: appearLeft;
+	animation-delay: 3s;
+	animation-duration: 5s;
+	opacity: 0;
+	animation-fill-mode: forwards;
+}
+
+img {
+	text-align: center;
+	max-width: 100%;
+	height: auto;
+	width: auto;
+}
+
+.image-resize {
+    width: 90%;
+    height: 325px;
+    object-fit: cover;
+    object-position: center center;
+    transition: all 1s ease-in-out;
+}
+
+.image-effect:hover {
+	overflow: hidden;
+	filter: brightness(150%) grayscale(75%);
+	-webkit-filter: brightness(150%) grayscale(75%);
+	transform: scale(1.1);
+	outline: 3px solid #d3325f;
+	transition: all 1s ease-in-out;
+}
+
+.showcase::after {
+	content:'';
+	height: 100vh; /*takes up entire viewport, big or small*/
+	width: 100%;
+	background-image: url(https://images.pexels.com/photos/1143536/pexels-photo-1143536.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: block;
+	filter: blur(10px);
+	-webkit-filter: blur(10px);
+	transition: all 1000ms;
+}
+
+.showcase:hover::after {
+	filter: blur(0px);
+	-webkit-filter: blur(0px);
+}
+
+.showcase:hover .content {
+	filter: blur(1px);
+	-webkit-filter: blur(1px);
+}
+
+.content {
+	position: absolute;
+	z-index: 1; /*content displays over background image*/
+	top: 25%;
+	left: 25%;
+	margin-top: 105px;
+	width: 50%;
+	height: 350px;
+	text-align: center;
+	transition: all 1000ms;
+}
+
+.content .logo {
+	height: 120px;
+	width: 120px;
+}
+
+.content .title{
+	font-size: 2.2rem;
+	margin-top: 1rem;
+}
+
+.content .text {
+	line-height: 1.7;
+	letter-spacing: 7px;
+	margin-top: 1rem;
+}
+
+.logo {
+	animation: dropTop;
+	animation-delay: 1s;
+	animation-duration: 5s;
+	opacity: 0;
+	animation-fill-mode: forwards;
+
+}
+
+/*logo animation*/
+
+@keyframes dropTop {
+	0% {
+		transform: translateY(10px);
+	}
+	15% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+/*h2 animation*/
+
+@keyframes appearLeft {
+	0% {
+		transform: translateX(-20px);
+	}
+	50% {
+		transform: translateX(10px);
+	}
+	100% {
+		transform: translateX(0px);
+		opacity: 1
+	}
+}
+
+/*sub-text animation*/
+
+@keyframes appearRight {
+	0% {
+		transform: translateX(20px);
+	}
+	50% {
+		transform: translateX(-10px);
+	}
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+.container {
+	max-width: 1460px;
+	margin: auto;
+	overflow: hidden;
+	padding: 4rem 1rem;
+}
+
+.sub-text {
+	text-shadow: 0 2px 3px black;
+	animation: appearRight;
+	animation-delay: 6s;
+	animation-duration: 5s;
+	opacity: 0;
+	animation-fill-mode: forwards;
+}
+
+.grid-2 {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-6 {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.services {
+	background: #301a20;
+    border: 2px solid #301a20;
+}
+
+.center {
+	text-align: center;
+	margin: auto;
+}
+
+.center-2 {
+	text-align: center;
+	font-size: 250%;
+    text-shadow: 0 3px 3px black;
+    letter-spacing: 10px;
+    padding-top: 1.5em;
+}
+
+.portfolio-header {
+	content:'';
+	background: url(https://images.pexels.com/photos/220071/pexels-photo-220071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) center/cover fixed no-repeat;
+	height: 150em;
+	width: 100%;
+	position: absolute;
+	filter: blur(10px);
+	-webkit-filter: blur(10px);
+	z-index: -1;
+}
+
+.portfolio-h3 {
+	font-family: 'Cutive Mono', monospace;
+}
+
+.port-window {
+	margin-top: -2em;
+}
+
+.parent-container {
+	margin-top: -2em;
+}
+
+.bg-light {
+	background: #44262e;
+	color: #fff;
+}
+
+.bg-dark {
+	background: #333;
+	color: #f4f4f4;
+}
+
+.about-me {
+	width: 85%;
+    max-width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.about-header {
+	text-align: center;
+    font-size: 250%;
+    text-shadow: 0 3px 3px black;
+    letter-spacing: 10px;
+}
+
+.form-style-4 {
+	font-size: 16px;
+	background: #301a20;
+	padding: 30px 30px 15px 30px;
+	border: 5px solid #c6a9b1;
+}
+
+.form-style-4 input[type=submit],
+.form-style-4 input[type=button],
+.form-style-4 input[type=text],
+.form-style-4 input[type=email],
+.form-style-4 textarea,
+.form-style-4 label {
+	font-size: 16px;
+	color: #fff;
+}
+
+.form-style-4 label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.form-style-4 label > span{
+	display: inline-block;
+	float: left;
+	width: 150px;
+}
+
+.form-style-4 input[type=text],
+.form-style-4 input[type=email] {
+	background: transparent;
+	border: none;
+	border-bottom: 1px dashed #c6a9b1;
+	width: 275px;
+	outline: none;
+	padding: 0px 0px 0px 0px;
+	font-style: italic;
+}
+
+.form-style-4 textarea{
+	font-style: italic;
+	padding: 0px 0px 0px 0px;
+	background: transparent;
+	outline: none;
+	border: none;
+	border-bottom: 1px dashed #c6a9b1;
+	width: 275px;
+	overflow: hidden;
+	resize:none;
+	height:20px;
+}
+
+.form-style-4 textarea:focus, 
+.form-style-4 input[type=text]:focus,
+.form-style-4 input[type=email]:focus,
+.form-style-4 input[type=email] :focus {
+	border-bottom: 1px dashed #D9FFA9;
+}
+
+.form-style-4 input[type=submit],
+.form-style-4 input[type=button]{
+	background: #c6a9b1;
+	border: none;
+	padding: 8px 10px 8px 10px;
+	border-radius: 5px;
+	color: #F3F3F3;
+}
+
+.form-style-4 input[type=submit]:hover,
+.form-style-4 input[type=button]:hover{
+	background: #F3F3F3;
+	color: #c6a9b1;
+	transition: all 1s ease-in;
+	transition: all 1s ease-out;
+}
+
+footer {
+	padding: 2.2rem;
+}
+
+footer p {
+	margin: 0;
+}
+
+.p-footer {
+	padding-top: 10px;
+	font-size: 140%;
+}
+
+.social-icon {
+	padding-right: 10px;
+	color: #c6a9b1;
+	transition: color 1s ease;
+}
+
+.social-icon:hover {
+	color: #f3f3f3;
+}
+
+.bg-dark {
+	background: #301a20;
+}
+
+/*Media Queries for Responsive Design*/
+
+@media(max-width: 1200px){
+	
+	.grid-6 {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.portfolio-header {
+		height: 220em;
+	}
+}
+
+@media(max-width: 992px){
+	
+	.grid-6 {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.portfolio-header {
+		height: 280em;
+	}
+}
+
+/*Medium Screens*/
+@media(max-width: 793px){
+
+	.grid-6 {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.grid-2 {
+    grid-template-columns: 1fr;
+	}
+
+	.about-me {
+		width: 65%;
+	    max-width: 100%;
+	    height: 450px;
+	}
+
+	.portfolio-header {
+		height: 470em;
+	}
+
+	.image-resize {
+	    width: 90%;
+	    height: 325px;
+	    object-fit: cover;
+	    object-position: center center;
+	}
+
+	h2 {
+		font-size: 130%;
+	}
+
+	.sub-text {
+		font-size: 70%;
+	}
+}
+
+/*Small Screens*/
+@media(max-width: 560px){
+	
+	.showcase:after {
+	height: 50vh;
+	}
+
+	.content {
+		top: 15%;
+		margin-top: 5px;
+	}
+
+	.content .logo {
+		height: 65px;
+		width: 65px;
+	}
+
+	.content .text {
+		display: none;
+	}
+
+	.grid-6 {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: 1fr;
+	}
+
+	.grid-3 {
+		grid-template-columns: 1fr;
+	}
+
+	.portfolio-header {
+		height: 1085em;
+	}
+
+	.image-resize {
+    width: 80%;
+    height: 450px;
+    object-fit: cover;
+    object-position: center center;
+	}
+
+	.services div {
+		padding: 1.2rem 1rem;
+	}
+}
+
+@media(max-width: 550px){
+	
+	h2 {
+		font-size: 85%;
+	}
+}
+
+@media(max-width: 390px) {
+	
+	.form-style-4 {
+		background: transparent;
+		border: 0;
+	}
+
+	.form-style-4 input[type=text],
+	.form-style-4 input[type=email] {
+		width: 180px;
+	}
+
+	.form-style-4 textarea {
+		width: 180px;
+	}
+}
+
+/*Landscape*/
+
+@media(max-height: 500px) {
+	
+	.content .title, .content .text {
+		display: none;
+	}
+
+	.content {
+		top: 0;
+	}
+}
+
